@@ -24,3 +24,4 @@ for (let i = 0; i < allentities.length; i++) {
  let filePath = path.join(inputDir, "summary.txt");
 fs.writeFileSync(filePath, content);
 console.log("summary file created");
+// trying to changes
