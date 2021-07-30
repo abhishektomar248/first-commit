@@ -25,4 +25,3 @@ for (let i = 0; i < allentities.length; i++) {
 fs.writeFileSync(filePath, content);
 console.log("summary file created");
 // trying to changes
-//hello
