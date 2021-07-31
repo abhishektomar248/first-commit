@@ -1,10 +1,10 @@
 //implementation->files /folder interact
 //directory
 //files->read/write/update/delete
-let fs= require("fs");
+//let fs= require("fs");
 //let content=fs.readFileSync("f1.txt");
 //buffer->video,audio,text so ,content gives us the txt form
-//console.log("content :,content");
+//console.log("content :",content);
 //+ ->concateniate ->string=> text
 //console.log("content:" + content);
 //write ->writeFileSync
@@ -24,13 +24,27 @@ let fs= require("fs");
 //delete
 //fs.rmdir("myDirectory");
 //path ->check does it exist or not
-let doesExist=fs.existsSync("fs1.js");
-console.log("this path exists ?", doesExist);
+//let doesExist=fs.existsSync("fs1.js");
+//console.log("this path exists ?", doesExist);
 //path ->belong to a directory or file
-let statsOfAPath=fs.lstatSync("dirl");//fl tells that the path is a file or folder
-console.log("isdirectory",statsOfAPath.isDirectory());
-console.log("isFile?",statsOfAPath.isFile());
+//let statsOfAPath=fs.lstatSync("dirl");//fl tells that the path is a file or folder
+//console.log("isdirectory",statsOfAPath.isDirectory());
+//console.log("isFile?",statsOfAPath.isFile());
 //directory ->content
 /* let address= "C:\\Users\\Abhishek Singh Tomar\\Downloads\\code\\Lecture_2\\module_1_js";
 let content=fs.readdirSync(address);
 console.log("directory content",content); */
+
+
+// copy 
+// firstParam -> srcFilePath, destFilePath
+let fs=require("fs");
+let path =require("path");
+let srcFilePath ="C:\\Users\\Abhishek Singh Tomar\\Downloads\\code\\Lecture_2\\typeof.js";
+let destDir = "C:\\Users\\Abhishek Singh Tomar\\Downloads\\code\\Lecture_2\\module_1_js\\fs organizer\\activity\\command\\examples";
+// return last portion of the path 
+let tobeCopiedFileName = path.basename(srcFilePath);
+console.log(tobeCopiedFileName);
+let destPath = path.join(destDir, tobeCopiedFileName)
+fs.copyFileSync(srcFilePath, destPath);
+console.log("File copied");
