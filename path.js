@@ -8,8 +8,8 @@ console.log("fileName",fileName);
 console.log("content",content);
 //current path of directory
  let currentpath=process.cwd();
-//console.log("currentPath",currentpath);
+console.log("currentPath",currentpath);
 //path ->path for independent
-  let filePath=path.join(current,"dirl",fileName);
+  let filePath=path.join(currentpath,"dirl",fileName);
 console.log("filePath",filePath);
 fs.writeFileSync(filePath,content)   
