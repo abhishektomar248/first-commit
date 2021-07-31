@@ -22,15 +22,15 @@ let cap = {
     
 }
 // print-> 
-// console.log(cap);
+ console.log(cap);
 // get
 // . notation
-// console.log("name", cap.name);
-// console.log("friends", cap.friends[1]);
+console.log("name", cap.name);
+ console.log("friends", cap.friends[1]);
 console.log("Age", cap.age);
 // // if not present 
-// console.log("movies", cap.movies);
-// cap.sayHi();
+console.log("movies", cap.movies);
+cap.sayHi();
 // [] operator 
 // let varName="address";
 // console.log("address",cap[varName]);
