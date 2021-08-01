@@ -19,6 +19,16 @@ for(let i=0;i<filesArr.length;i++){
         return;
     }
     //console.log(ans);
+    //option check 
+    /* let isBothPresent=optionArr.includes("-n")&&optionArr.includes("-b");
+    if(isBothPresent){
+        if( let isNpresent==inputArr[0]){
+            console.log(isNpresent);
+        }else{
+            console.log(isBPresent);
+        }
+
+    } */
 }
 let content ="";
 for(let i=0;i<filesArr.length;i++){
@@ -46,4 +56,24 @@ if(isSPresent){
     }
     contentArr=tempArr;
 }
-console.log(contentArr.join("\n"));
+//console.log(contentArr.join("\n"));
+let isNPresent=optionArr.includes("-n");
+if(isNPresent==true){
+    for(let i=0;i<contentArr.length;i++){
+        contentArr[i]=`${i+1} ${contentArr[i]}`;    
+    }
+}
+//console.log(contentArr.join("\n"));
+
+let isBPresent=optionArr.includes("-b");
+if(isBPresent==true){
+    for(let i=0;i<contentArr.length;i++){
+        if(contentArr[i]!=""){
+        contentArr[i]=`${i+1} ${contentArr[i]}`;  
+        }
+    }
+} 
+console.log(contentArr.join("\n")); 
+    
+
+
