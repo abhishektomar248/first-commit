@@ -12,6 +12,21 @@ for(let i=0;i<inputArr.length;i++){
         filesArr.push(inputArr[i]);
     }
 }
+//option check
+ if(optionArr.includes("-n")&& optionArr.includes("-b")){
+    let tempArr=[];
+    for(let i=0;i<optionArr.length;i++){
+        if(optionArr[i]=="-n"){
+            tempArr.push(optionArr[i]);
+            break;
+        }
+        if(optionArr[i]=="-b"){
+            tempArr.push(optionArr[i]);
+            break;
+        }
+    }
+    optionArr=tempArr;
+} 
 for(let i=0;i<filesArr.length;i++){
     let ans=fs.existsSync(filesArr[i]);
     if(ans==false){
@@ -19,16 +34,7 @@ for(let i=0;i<filesArr.length;i++){
         return;
     }
     //console.log(ans);
-    //option check 
-    /* let isBothPresent=optionArr.includes("-n")&&optionArr.includes("-b");
-    if(isBothPresent){
-        if( let isNpresent==inputArr[0]){
-            console.log(isNpresent);
-        }else{
-            console.log(isBPresent);
-        }
-
-    } */
+    
 }
 let content ="";
 for(let i=0;i<filesArr.length;i++){
@@ -67,9 +73,12 @@ if(isNPresent==true){
 
 let isBPresent=optionArr.includes("-b");
 if(isBPresent==true){
+    let counter=1
     for(let i=0;i<contentArr.length;i++){
         if(contentArr[i]!=""){
-        contentArr[i]=`${i+1} ${contentArr[i]}`;  
+       // contentArr[i]=`${i+1} ${contentArr[i]}`; 
+       contentArr[i]=`${counter} ${contentArr[i]}`;
+       counter++;   
         }
     }
 } 
