@@ -26,7 +26,8 @@ for(let i=0;i<inputArr.length;i++){
         }
     }
     optionArr=tempArr;
-} 
+}
+//for files checking it is present or not 
 for(let i=0;i<filesArr.length;i++){
     let ans=fs.existsSync(filesArr[i]);
     if(ans==false){
